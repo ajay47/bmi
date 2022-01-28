@@ -7,7 +7,7 @@ const calculateBMIandRiskCategory = (weight, height) => {
 
   const heightMeters = height / 100;
 
-  const bmi = weight / (heightMeters * heightMeters);
+  const bmi = (weight / (heightMeters * heightMeters)).toFixed(2);
   let risk = '';
   let category = '';
 
@@ -48,3 +48,5 @@ const newBMITable = SAMPLE_DATA.map(sample => {
 });
 
 console.log(newBMITable, OverweightCounter);
+
+module.exports = { calculateBMIandRiskCategory };
